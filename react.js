@@ -451,6 +451,12 @@
    * }
    */
 
+    log: function(key){
+      if(typeof console !== 'undefined'){
+        console.log(this.lookup(key));
+      }
+    },
+
     lookup: function(key, options){
       options = options || {};
       options.listener = {
